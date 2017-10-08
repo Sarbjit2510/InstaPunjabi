@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".CameraActivity"
+    android:background="#000000" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right" >
+
+        <Button
+            android:id="@+id/flashbtn"
+            android:layout_width="40dp"
+            android:layout_height="64dp"
+            android:background="@drawable/flash78" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/surfacelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".8"
+        android:orientation="horizontal" >
+
+        <SurfaceView
+            android:id="@+id/surfView1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/gallerybtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/gallery" />
+
+        <Button
+            android:id="@+id/capturebtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/camera"
+             />
+
+        <Button
+            android:id="@+id/changecamreabtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/frontcamera"
+            />
+    </LinearLayout>
+
+</LinearLayout>

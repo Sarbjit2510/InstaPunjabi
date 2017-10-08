@@ -1,0 +1,251 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".CameraActivity" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right" >
+
+                <Button
+                    android:id="@+id/sharebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:background="#000000"
+                    android:text="Share"
+                    android:textColor="#0dbcf3"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/surfacelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:id="@+id/imagelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:id="@+id/mainimg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/ic_launcher" />
+
+                    <ImageView
+                        android:id="@+id/listtxtimg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="350dp"
+                        android:scaleType="matrix" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnslayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.06"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/addfontbtn"
+                    android:layout_width="40dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/addfonts103" />
+
+                <Button
+                    android:id="@+id/emobtn"
+                    android:layout_width="40dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="42dp"
+                    android:background="@drawable/emoticon" />
+
+                <Button
+                    android:id="@+id/checkinbtn"
+                    android:layout_width="40dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="42dp"
+                    android:background="@drawable/places250" />
+
+                <Button
+                    android:id="@+id/morebtn"
+                    android:layout_width="40dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="42dp"
+                    android:background="@drawable/more" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" >
+
+            <LinearLayout
+                android:id="@+id/emolayout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="right"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/tickButton1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/done" />
+
+                <TabHost
+                    android:id="@+id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+                        </TabWidget>
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" >
+
+                                <GridView
+                                    android:id="@+id/gridView1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:columnWidth="40dp"
+                                    android:numColumns="6"
+                                    android:stretchMode="spacingWidthUniform"
+                                    android:verticalSpacing="10dp" >
+                                </GridView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" >
+
+                                <GridView
+                                    android:id="@+id/gridView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:columnWidth="40dp"
+                                    android:numColumns="6"
+                                    android:stretchMode="spacingWidthUniform"
+                                    android:verticalSpacing="10dp" >
+                                </GridView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" >
+
+                                <GridView
+                                    android:id="@+id/gridView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:columnWidth="40dp"
+                                    android:numColumns="6"
+                                    android:stretchMode="spacingWidthUniform"
+                                    android:verticalSpacing="10dp" >
+                                </GridView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" >
+
+                                <GridView
+                                    android:id="@+id/gridView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:columnWidth="40dp"
+                                    android:numColumns="6"
+                                    android:stretchMode="spacingWidthUniform"
+                                    android:verticalSpacing="10dp" >
+                                </GridView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" >
+
+                                <GridView
+                                    android:id="@+id/gridView5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:columnWidth="40dp"
+                                    android:numColumns="6"
+                                    android:stretchMode="spacingWidthUniform"
+                                    android:verticalSpacing="10dp" >
+                                </GridView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" >
+
+                                <GridView
+                                    android:id="@+id/gridView6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:columnWidth="40dp"
+                                    android:numColumns="6"
+                                    android:stretchMode="spacingWidthUniform"
+                                    android:verticalSpacing="10dp" >
+                                </GridView>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
